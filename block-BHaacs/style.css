@@ -166,16 +166,21 @@ a {
   background-color: #59bfc2;
   color: white;
   height: 100vh;
-  width: 100%;
   position: relative;
 }
 header {
   padding: 2rem 0;
   width: 100%;
 }
+#toggle {
+  display: none;
+}
 .brand-name a {
   font-size: 2rem;
   font-weight: 800;
+}
+.bars {
+  display: none;
 }
 a {
   margin-left: 2rem;
@@ -428,15 +433,15 @@ h3 {
   font-size: 1.3rem;
   font-weight: 500;
 }
-.col1 {
+.footer-col {
   text-align: left;
 }
-.col1 p {
+.footer-col p {
   font-size: 1.5rem;
   font-weight: 500;
   color: #7184b0;
 }
-.col1 a {
+.footer-col a {
   margin: 0;
 }
 .fab {
@@ -458,6 +463,43 @@ h3 {
     font-size: 10px;
   }
 
+  .column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .navs {
+    display: none;
+  }
+  #toggle:checked ~ .navs {
+    display: inline-block;
+  }
+  .bars {
+    display: inline-block;
+    font-size: 2rem;
+    color: black;
+    position: relative;
+    z-index: 100;
+  }
+  .navs {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #59bfc2;
+    z-index: 100;
+    padding-top: 15rem;
+  }
+  .navs a {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .navs li {
+    margin: 2rem 0;
+  }
   .parent-box {
     flex: 0 1 100%;
   }
@@ -466,6 +508,10 @@ h3 {
   }
   .card-parent {
     flex: 0 1 100%;
+  }
+  .card {
+    flex: 0 1 75%;
+    margin: 1rem auto;
   }
   article {
     text-align: center;
@@ -478,5 +524,10 @@ h3 {
   }
   .triangle-left {
     display: none;
+  }
+  .footer-col {
+    flex: 0 1 100%;
+    margin: 1.5rem auto;
+    width: 100%;
   }
 }
